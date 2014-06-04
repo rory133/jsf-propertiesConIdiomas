@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <!--  <f:loadBundle basename="com.apuntesdejava.jsf.resources.mensajes" var="msg"/>-->
+        
+        <title><h:outputText value="#{msg.app_title}"/> </title>
+        
+       <!-- <f:view locale="#{user.locale}"/> -->
+    </h:head>
+    <h:body>
+        <h1> #{msg['app.formulario']}</h1>
+    </h:body>
+    
+   
+    
+    <h:form>
+     
+    <h:outputLabel value="#{msg['app.nombre']}" for="nombre"/>
+    <h:inputText value="#{contactoFormBean.nombre}" id="nombre" />
+     
+    <h:commandButton value="#{msg['app.saludar']}" />
+    <h:outputText value="#{contactoFormBean.saludo}" />
+    
+    
+    </h:form>
+     <h:outputText value="#{msg['app.localeAplicacion']}" />
+    <h:outputText value="#{contactoFormBean.contexto}"/>
+     <br />
+     <h:outputText value="#{msg['app.localeCliente']}" />
+    <h:outputText value="#{contactoFormBean.contextoCliente}"/>
+    <br />
+     
+</html>
+
