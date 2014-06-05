@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 
 
 
-
 /**
  *
  * @author rory
@@ -32,7 +31,7 @@ public class ContactoFormBean {
      * Creates a new instance of ContactoFormBean
      */
     public ContactoFormBean() {
-        setContexto();
+        setContexto("");
     }
     
        
@@ -62,7 +61,7 @@ public String getSaludo(){
         return contexto;
     }
 
-    public void setContexto() {
+    public void setContexto(String contexto) {
               
       //Locale de la palicacion
        this.contexto =  FacesContext.getCurrentInstance().getViewRoot().getLocale().toString();
